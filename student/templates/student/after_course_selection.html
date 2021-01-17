@@ -1,0 +1,13 @@
+<html>
+<body>
+{% if x %}
+Welcome
+{% else %}
+<form method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit">Submit</button>
+</form>
+{% endif %}
+</body>
+</html>

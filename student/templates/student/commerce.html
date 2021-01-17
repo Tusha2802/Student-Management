@@ -1,0 +1,46 @@
+{% extends "student/homepage.html" %} 
+<html>
+<body>
+
+{% block content_heading %}
+<h2>
+<h2 align="center">Courses Offered</h2><br>
+
+{% if x and id %}
+
+Welcome
+{{w}}
+
+{% else %}
+
+<form method="POST">
+{% csrf_token %}
+
+{% for i in l %}
+<h3>
+<input type="radio" name="{{i.id}}" value="P.C.M"><a href="pcm/">{{i.c1}}</a><br>
+<input type="radio" name="{{i.id}}" value="P.C.B"><a href="pcb/">{{i.c2}}</a><br>
+<input type="radio" name="{{i.id}}" value="Commerce"><a href="commerce/">{{i.c3}}</a><br>
+<input type="radio" name="{{i.id}}" value="Humanities"><a href="humanities/">{{i.c4}}</a><br><br>
+</h3>
+{% endfor %}
+
+<button type="submit" name="submit">Submit</button>
+</form>
+
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 align="center"><font color="Blue">Commerce</h1>
+<h3><p><font color="purple">It contains Accounts, Maths and Start-Up.<br>
+Total fees : 1,50,000 for 2 year course.<br>
+Total classes : 5 every week, (Sat,Sun off.)<br>
+Faculty: Mr. Manish Dua, BHU Graduate.
+
+</p></h3>
+</body>
+{% endblock %}
+</html>

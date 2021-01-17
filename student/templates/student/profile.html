@@ -1,0 +1,29 @@
+{% extends "student/homepage.html" %} 
+<html>
+<body>
+
+{% block content_heading %}
+
+<div style="padding:10px;"><a href="/student/login/allUsers/">ALL USERS</div>
+<div style="padding:10px;"><a href="/student/login/profile/">ADD STUDENT</div><br><br>
+<div style="padding:10px;"><a href="/student/login/profile/REMOVE ALL USERS/">REMOVE ALL USERS</div>
+
+{% endblock %}
+
+{% block content %}
+{% if x %}
+
+{{msg}}
+
+{% else %}
+
+<form method="POST" style="text-align:center;margin-top:50px;padding:10px;">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" name="submit">Submit</buttton>
+</form>
+
+{% endif %}
+{% endblock %}
+</body>
+</html>

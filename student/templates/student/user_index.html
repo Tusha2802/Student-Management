@@ -1,0 +1,49 @@
+{% extends "student/homepage.html" %} 	
+<html>
+<body>
+
+{% block content %}
+
+<h3 align="right">Welcome! Mr. {{name}}</h1><br>
+
+<h2><font color="Blue">{{id}}</font></h2>
+<h3>
+<font color="#85#00">
+{% if id == "P.C.M" %}
+
+Your Class Timings are as follows: <br><br>
+Physics : 4 - 5:30<br>
+Maths : 5:45 - 7:00<br>
+Chemistry : 7:15 - 8:30 <br>
+
+
+
+{% elif id == "P.C.B" %}
+Your Class Timings are as follows: <br><br>
+Physics : 4 - 5:30<br>
+Maths : 5:45 - 7:00<br>
+Biology : 7:15 - 8:30 <br>
+
+
+{% elif id == "Commerce" %}
+Your Class Timings are as follows: <br><br>
+Accounts : 4 - 5:30<br>
+Maths : 5:45 - 7:00<br>
+Start-up : 7:15 - 8:30 <br>
+
+{% elif id == "Humanities" %}
+Your Class Timings are as follows: <br><br>
+History : 4 - 5:30<br>
+Political Science : 5:45 - 7:00<br>
+Economics : 7:15 - 8:30 <br>
+</font>
+</h3>
+
+
+{% endif %}
+
+
+{% endblock %}
+
+</body>
+</html>

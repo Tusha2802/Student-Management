@@ -1,0 +1,23 @@
+{% extends "student/homepage.html" %}
+<html>
+<body>
+{% block content_heading %}
+<a href="/student/about_us/">About Us</a><br><br>
+<a href="/student/contact_us/">Contact Us</a><br><br>
+<a href="/student/login/">Login</a><br>
+
+{% endblock %}
+
+{% block content %}
+<h2>
+<form method="POST" style="text-align:center;margin-top:150px;">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" name="btn" value="Admin"><font style="padding:10px;font-size:16px;">Admin</font></button>
+<button type="submit" name="btn" value="User"><font style="padding:10px;font-size:16px;">User</font></button>
+</form>
+</h2>
+{% endblock %}
+
+</body>
+</html>

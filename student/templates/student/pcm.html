@@ -1,0 +1,43 @@
+{% extends "student/homepage.html" %}
+{% load static %}
+<html>
+<body>
+
+{% block content_heading %}
+
+<h2 align="center">Courses Offered</h2><br>
+
+{% if not x %}
+
+<form method="POST">
+{% csrf_token %}
+{% for i in l %}
+<h3>
+<input type="radio" name="{{i.id}}" value="P.C.M"><a href="pcm/">{{i.c1}}</a><br>
+<input type="radio" name="{{i.id}}" value="P.C.B"><a href="pcb/">{{i.c2}}</a><br>
+<input type="radio" name="{{i.id}}" value="Commerce"><a href="commerce/">{{i.c3}}</a><br>
+<input type="radio" name="{{i.id}}" value="Humanities"><a href="humanities/">{{i.c4}}</a><br><br>
+</h3>
+{% endfor %}
+
+<button type="submit" name="submit">Submit</button>
+</form>
+
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 align="center"><font color="Blue">P.C.M</font></h1>
+<h3><p><font color="Red">It contains Physics,Chemistry and Maths.<br>
+Total fees : 1,90,000 for 2 year course.<br>
+Total classes : 4 every week, (Wed,Sat,Sun off.)<br>
+Faculty: Mr. Nishant Sharma, IIT Delhi Graduate.</h3>
+</font>
+</p>
+
+{% endblock %}
+
+</body>
+</html>

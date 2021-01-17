@@ -1,0 +1,25 @@
+
+<htlm>
+<body>
+ 
+
+
+{% for i in l %}
+<div style="border:2px solid red;overflow:auto;margin-top:5px;">
+<div style="float:left;">
+<div style="float:left;padding:10px;margin:10px;width:50px;">{{i.Name}}</div>
+<div style="float:left;padding:10px;margin:10px;width:150px;">{{i.Email}}</div>
+<div style="float:left;padding:10px;margin:10px;width:50px;">{{i.Password}}</div>
+<div style="float:left;padding:10px;margin:10px;width:100px;">{{i.Contact}}</div>
+<div style="float:left;padding:10px;margin:10px;width:100px;">{{i.Qualification}}</div> 
+<div style="float:left;padding:10px;margin:10px;width:50px;"><a href="{% url "rem" i.id %}">X</a></div> 
+<div style="float:left;padding:10px;margin:10px;width:50px;"><a href="{% url "upd" i.id %}">EDIT</a></div> 
+
+
+</div>
+</div>
+{% endfor %}
+
+
+</body>
+</html>

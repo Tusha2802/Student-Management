@@ -1,0 +1,50 @@
+body{
+background-color:darkorange;
+}
+#content {
+
+float:left;
+width:65%;
+padding:0 0 0 30px;
+height:500px;
+border:2px solid red;
+margin-top:20px;
+background-color:#efefef;
+
+}
+
+#sidebar { 
+
+float:left;
+width:20%;
+padding:20px;
+background:#efefef;
+height:465px;
+border:2px solid blue;
+margin:20px;
+font-sixe:50%;
+}
+ 
+#header {
+font-family: 'Algerian', sans-serif;
+    color:black;
+    font-weight:bold;
+    font-style:italic;
+    text-decoration:underline;
+    font-size:22px;
+    margin-right:0%;
+    text-align:center;
+}
+
+
+#subheader {
+font-family: 'Times new roman', sans-serif;
+    text-align:right;
+    padding-top:0px;
+    font-sixe:0px;
+    color:white;
+}
+
+#sidebar_color{
+backgorund-color:black;
+}
